@@ -1,4 +1,4 @@
-from name_shortener import NameProcessor
+from one_name_shortener import NameProcessor
 
 # test des noms simples
 def test_process_name_simple():
@@ -93,7 +93,7 @@ def test_process_name_saint():
         name.get_very_short_name(),
     ) == (
         "Saint-Brice-sous-Forêt",
-        "St-Brice-sous-F.",
+        "St-Brice-s/s-F.",
         "St-Brice",
     )
 
@@ -151,4 +151,32 @@ def test_process_name_arrondissement():
         "Lyon 5e Arrondissement",
         "Lyon 5e arr.",
         "Lyon 5e",
+    )
+
+
+# noms avec "sous":
+def test_process_name_sous():
+    name = NameProcessor("Athies-sous-Laon")
+    assert (
+        name.preprocess_name(),
+        name.get_short_name(),
+        name.get_very_short_name(),
+    ) == (
+        "Athies-sous-Laon",
+        "Athies-s/s-L.",
+        "Athies",
+    )
+
+
+# noms avec "sur":
+def test_process_name_sur():
+    name = NameProcessor("Assis-sur-Serre")
+    assert (
+        name.preprocess_name(),
+        name.get_short_name(),
+        name.get_very_short_name(),
+    ) == (
+        "Assis-sur-Serre",
+        "Assis-s/-S.",
+        "Assis",
     )

@@ -44,7 +44,7 @@ Sinon, on applique au nom les règles citées ci-après.
 
 Le premier mot est conservé en entier.
 
-#### Les Saints et Arrondissements
+#### Les Saints, sous, sur et Arrondissements
 
 Les mots suivants sont remplacés par leur équivalent :
 <table>
@@ -52,6 +52,8 @@ Les mots suivants sont remplacés par leur équivalent :
   <tr><td>Sainte</td><td>-></td><td>Ste</td></tr>
   <tr><td>Saints</td><td>-></td><td>Sts</td></tr>
   <tr><td>Saintes</td><td>-></td><td>Stes</td></tr>
+  <tr><td>sous</td><td>-></td><td>s/s</td></tr>
+  <tr><td>sur</td><td>-></td><td>s/</td></tr>
   <tr><td>Arrondissement</td><td>-></td><td>arr.</td></tr>
 </table>
 
